@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>webapp</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+</body>
+
+</html>
+<script>
+  var dpr = window.devicePixelRation;
+  var meta = document.createElement('meta');
+  // dpr 防止缩放出现的问题
+  meta.setAttribute('content', 'initial-scale=' + 1 / dpr + ',maximum-scale=' + 1 / dpr + ',minimum-scale=' + 1 / dpr + ',user-scalable=no');
+  // rem
+  document.addEventListener('DOMContentLoaded', function(e) {
+    document.getElementsByTagName('html')[0].style.fontSize = window.innerWidth / 10 + 'px';
+  }, false);
+</script>
